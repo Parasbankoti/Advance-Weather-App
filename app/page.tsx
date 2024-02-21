@@ -1,23 +1,26 @@
 "use client";
-import { Card, Metric, Text } from "@tremor/react";
+import CityPicker from "@/Components/CityPicker";
+import { Card, Divider, Metric, Subtitle, Text } from "@tremor/react";
 
 export default function Home() {
   return (
     <>
-      <main className="">
-        <Card
-          className="mx-auto max-w-xs"
-          decoration="top"
-          decorationColor="indigo"
-        >
-          <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
-            Sales
-          </p>
-          <p className="text-3xl text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
-            $34,743
-          </p>
+      <div
+        className="min-h-screen bg-gradient-to-br from-[#394F68] to-[#394F68] p-10 flex flex-col
+      justify-center items-center
+      "
+      >
+        <Card>
+          <Text className="text-6xl font-bold text-center">Weather AI</Text>
+          <Subtitle className="text-xl text-center">
+            Powered by OpenAI, NextJS, Tailwind CSS and Tremor 2.0
+          </Subtitle>
+          <Divider />
+          <Card className="bg-gradient-to-br from-[#394F68] to-[#394F68]">
+            <CityPicker />
+          </Card>
         </Card>
-      </main>
+      </div>
     </>
   );
 }
